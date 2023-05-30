@@ -1,0 +1,10 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .drawer-container {
+    flex-grow: 1;
+  }
+  

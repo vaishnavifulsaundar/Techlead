@@ -1,0 +1,74 @@
+<!-- 
+<div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Add</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dataSource.data">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+        <td>
+            <button  type="submit" class="btn btn-success float-right" (click)="addData()">Add</button>
+        </td>
+          
+          
+          <td>
+            <button type="submit" class="btn btn-danger float-right" (click)="deleteItem(item)">Delete</button>
+        </td>
+        </tr>
+      </tbody>
+    </table>  
+
+  </div>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements"></mat-paginator>
+   -->
+
+
+
+
+   <div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Add</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dataSource.data">
+          <td>{{ item.id }}</td>
+          <td>
+            <ng-container *ngIf="item.editable">
+              <input type="text" [(ngModel)]="item.name" class="form-control">
+            </ng-container>
+            <ng-container *ngIf="!item.editable">
+              {{ item.name }}
+            </ng-container>
+          </td>
+          <td>
+            <button type="submit" class="btn btn-success float-right" (click)="addData()">Add</button>
+          </td>
+          <td>
+            <button type="submit" class="btn btn-danger float-right" (click)="deleteItem(item)">Delete</button>
+          </td>
+          <td>
+            <button *ngIf="!item.editable" type="button" class="btn btn-primary float-right" (click)="editItem(item)">Edit</button>
+            <button *ngIf="item.editable" type="button" class="btn btn-success float-right" (click)="updateItem(item)">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements"></mat-paginator>
+  

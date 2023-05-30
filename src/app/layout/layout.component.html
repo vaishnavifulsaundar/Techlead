@@ -1,0 +1,19 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <!-- Sidenav content goes here -->
+      <ul>
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/userdetails">User Details</a></li>
+        <!-- Add more navigation links as needed -->
+      </ul>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <!-- Toolbar goes here -->
+      <app-toolbar></app-toolbar>
+  
+      <!-- Main content area -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

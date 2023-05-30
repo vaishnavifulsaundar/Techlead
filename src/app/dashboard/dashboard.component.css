@@ -1,0 +1,28 @@
+mat-card{
+    width: 20rem;
+    height: 13rem;
+    margin: 5rem 20rem -1rem -9rem;
+}
+
+.one,.two{
+display: flex;
+/* align-content: flex-end; */
+flex-wrap: wrap;
+flex-direction: row-reverse;
+align-items: center;
+flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+button{
+    width: 7rem;
+    margin-top: 3rem;
+    margin-left: 6rem;
+}
+mat-card-title{
+    text-align: center;
+    height: 3rem;
+    background-color: rgb(209, 209, 209);
+}
+
+
